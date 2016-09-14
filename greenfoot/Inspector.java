@@ -35,25 +35,15 @@ public class Inspector extends Alien
         
         randomPick= (List<RandomPicker>)getWorld().getObjects(RandomPicker.class);
         randomPicker = (RandomPicker)randomPick.get(0);
+     
         
-        //Clear old meaasge.
-        /*if(greenPicker !=null)
-        {
-            greenPicker.clearMessage();
-        }
-        
-        if(randomPicker!= null)
-        {
-            randomPicker.clearMessage();
-        }*/
-        
-        System.out.println("Inspector is checking. hight :"+coin.getImage().getHeight() +"width: "+coin.getImage().getWidth());
+        //System.out.println("Inspector is checking. hight :"+coin.getImage().getHeight() +"width: "+coin.getImage().getWidth());
         if(coin.getImage().getHeight()==80 && coin.getImage().getWidth()==80)
         {
             int GreenorRandom = Greenfoot.getRandomNumber(2);       
             putMessage("Quarter! validated.",this.getX(),this.getY());
             
-            System.out.println("<<GreenorRandom>> "+GreenorRandom );
+            //System.out.println("<<GreenorRandom>> "+GreenorRandom );
             if(GreenorRandom ==0)//0-Greenpicker  1-RandomPicker
             {
                 //calling Green Picker
@@ -61,7 +51,7 @@ public class Inspector extends Alien
                 if(greenPick!=null)
                 {                  
                      
-                    System.out.println("----Calling Green Picker."+greenPicker);
+                    //System.out.println("----Calling Green Picker."+greenPicker);
                     greenPicker.pickAGumBall(0);
                     greenPicker.greenPickerMessage();
                 }
@@ -73,7 +63,7 @@ public class Inspector extends Alien
                 if(randomPick!=null)
                 {
                     
-                    System.out.println("----Calling random Picker."+randomPicker);
+                    //System.out.println("----Calling random Picker."+randomPicker);
                     randomPicker.pickAGumBall(Greenfoot.getRandomNumber(3));
                     randomPicker.randomPickerMessage();
                 }
@@ -82,14 +72,14 @@ public class Inspector extends Alien
         else if(coin.getImage().getHeight()==75 && coin.getImage().getWidth()==75)
         {
             //print fake message 
-            System.out.println("Fake Coin!.");
+            //System.out.println("Fake Coin!.");
             putMessage("Fake Coin!.", this.getX(),this.getY());
 
         }
         else if(coin.getImage().getHeight()==50 && coin.getImage().getWidth()==50)
         {
             //print penny
-            System.out.println("Penny will not work!");
+            //System.out.println("Penny will not work!");
             putMessage("Penny will not work!", this.getX(),this.getY());
         }
     }  

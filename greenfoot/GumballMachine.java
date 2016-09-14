@@ -32,7 +32,7 @@ public class GumballMachine extends Actor
         {
             List<Inspector> instruct = null;
             c = (Coin)getOneIntersectingObject(Coin.class);
-            if(c.getX() > this.getX() - 100 && c.getX() < this.getX()+100 && c.getY() > this.getY()-100 && c.getY() < this.getY() +100)
+            if(c.getX() > this.getX() - 100 && c.getX() < this.getX()+100 && c.getY() > this.getY()-200 && c.getY() < this.getY() +200)
             {
                
                putMessage("Crank It",this.getX(),this.getY());
@@ -83,7 +83,7 @@ public class GumballMachine extends Actor
                     cranked = true;
                     if (!getWorld().getObjectsAt(this.getX(), this.getY(), DisplayMessage.class).isEmpty())  
                     {  
-                        System.out.println("Delete syntax");
+                       
                         getWorld().removeObject((DisplayMessage)getWorld().getObjectsAt(this.getX(), this.getY(), DisplayMessage.class).get(0));  
                     }
                    // c.setCoinUsed(true); //use this method

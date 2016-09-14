@@ -25,7 +25,7 @@ public class RandomPicker extends Picker
     {
         int x = this.getX();
         int y = this.getY();
-        DisplayMessage msg = new DisplayMessage("Enjoy your Gumball !!");
+        DisplayMessage msg = new DisplayMessage("Enjoy your Gumball!!");
 
          if (!getWorld().getObjectsAt(x, y, DisplayMessage.class).isEmpty())  
         {  

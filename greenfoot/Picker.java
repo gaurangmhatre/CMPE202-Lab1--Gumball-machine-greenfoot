@@ -26,19 +26,16 @@ public class Picker extends Alien
                      GreenGumball objGreenGumball =  new GreenGumball();
                       objGreenGumball.getImage().scale(60,60);
                        getWorld().addObject(objGreenGumball, 500, 530);
-                     System.out.println("---put green gum ball");
                     break;
             case 1: //put red gum ball
                     RedGumball objRedGumball =  new RedGumball();
                       objRedGumball.getImage().scale(60,60);
                      getWorld().addObject(objRedGumball, 500, 530);
-                    System.out.println("--put red gum ball");
                     break;
             case 2: //put blue gum ball
                     BlueGumball objBlueGumball =  new BlueGumball();
                      objBlueGumball.getImage().scale(60,60);
                      getWorld().addObject(objBlueGumball, 500, 530);
-                     System.out.println("--put blue gum ball");
                     break;
                     
         }
